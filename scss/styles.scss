@@ -1,0 +1,197 @@
+
+$blueitem: #79addc;
+$whiteitem: white;
+$darkitem: rgba(0,0,0,0.6);
+
+body {
+    margin: 0;
+    font-family: arial;
+    padding-top: 70px; 
+}
+
+
+
+}
+
+
+
+.toppart {
+    width: 100%;
+    height: 70px;
+    background: $darkitem;
+    position: fixed;
+    top: 0;
+    display: flex;
+    align-items: center;
+    padding: 0 20px;
+}
+
+.logoitem img {
+    height: 40px;
+}
+
+.linkpart a {
+    color: $whiteitem;
+    text-decoration: none;
+    margin-left: 15px;
+    font-size: 15px;
+}
+
+
+
+{
+
+}
+
+
+.heroitem {
+    height: 500px;
+    background: url("../images/hero-image.jpg") center/cover no-repeat;
+    padding-top: 90px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    color: $whiteitem;
+}
+
+.heroitem h1 {
+    font-size: 36px;
+}
+
+.heroitem p {
+    font-size: 14px;
+    width: 60%;
+    margin-top: 8px;
+}
+
+.bluejob {
+    margin-top: 15px;
+    padding: 8px 25px;
+    background: $blueitem;
+    border: none;
+    color: white;
+    cursor: pointer;
+}
+
+
+.trippart {
+    width: 85%;
+    margin: 60px auto;
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+}
+
+.tripitem, .place, .area {
+    width: 28%;
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.tripitem img, .place img, .area img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+}
+
+.tripitem h2, .place h2, .area h2 {
+    margin-top: 10px;
+    font-size: 18px;
+}
+
+.tripitem p, .place p, .area p {
+    color: gray;
+    font-size: 14px;
+}
+
+.smalljob {
+    margin-top: 8px;
+    padding: 6px 15px;
+    background: $blueitem;
+    border: none;
+    color: white;
+    cursor: pointer;
+}
+
+
+.formjob {
+    width: 85%;
+    margin: 40px auto 80px;
+    background: #f0f0f0;
+    padding: 30px;
+}
+
+
+
+}
+
+
+.formjob h3 {
+    font-style: italic;
+    margin-bottom: 20px;
+}
+
+.rowitem, .floor {
+    display: flex;
+    gap: 15px;
+    margin-bottom: 15px;
+}
+
+.rowitem input, .floor input {
+    flex: 1;
+    padding: 8px;
+    border: 1px solid $blueitem;
+}
+
+.selectpart {
+    display: flex;
+    gap: 10px;
+    margin-bottom: 15px;
+}
+
+.selectpart select {
+    flex: 1;
+    padding: 8px;
+    border: 1px solid $blueitem;
+}
+
+.boxitem {
+    width: 100%;
+    height: 100px;
+    padding: 8px;
+    border: 1px solid $blueitem;
+    margin-bottom: 15px;
+}
+
+
+
+}
+
+
+
+.sendjob {
+    padding: 8px 30px;
+    background: $blueitem;
+    border: none;
+    color: white;
+    cursor: pointer;
+}
+
+@media (max-width: 800px) {
+    .trippart {
+        flex-direction: column;
+        gap: 30px;
+    }
+    .rowitem, .floor, .selectpart {
+        flex-direction: column;
+    }
+    .linkpart {
+        display: none;
+    }
+}
+
+
+
+}
