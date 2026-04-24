@@ -1,197 +1,294 @@
+$blue: #6fa8dc;
 
-$blueitem: #79addc;
-$whiteitem: white;
-$darkitem: rgba(0,0,0,0.6);
+* {
+  box-sizing: border-box;
+}
 
 body {
-    margin: 0;
-    font-family: arial;
-    padding-top: 70px; 
+  margin: 0;
+  font-family: 'Oswald', sans-serif;
+  font-weight: 300;
+  letter-spacing: 1px;
 }
 
 
-
+.logo {
+  padding: 0;
+  border: none;
 }
 
+.logo img {
+  height: 35px;
+  display: block;
+}
 
+.nav {
+  position: fixed;
+  width: 100%;
+  color: white;
+  z-index: 10;
 
-.toppart {
-    width: 100%;
-    height: 70px;
-    background: $darkitem;
-    position: fixed;
-    top: 0;
+  .nav-content {
+    width: 85%;
+    margin: auto;
     display: flex;
+    justify-content: space-between;
     align-items: center;
-    padding: 0 20px;
+    padding: 25px 0;
+  }
+
+  .links {
+    display: flex;
+
+    a {
+      color: white;
+      text-decoration: none;
+      margin-left: 30px;
+      font-size: 12px;
+      letter-spacing: 2px;
+    }
+  }
+
+  .nav-line {
+    width: 85%;
+    height: 1px;
+    background: white;
+    margin: auto;
+    opacity: 0.5;
+  }
 }
 
-.logoitem img {
-    height: 40px;
+
+.hero {
+  height: 650px;
+  background: linear-gradient(rgba(0,0,0,0.4), rgba(0,0,0,0.4)),
+              url('../images/hero-image.jpg') center/cover no-repeat;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  color: white;
+
+  .hero-text {
+    width: 400px;
+
+    h1 {
+      font-size: 55px;
+      letter-spacing: 10px;
+    }
+
+    p {
+      font-size: 14px;
+      margin: 15px 0 25px;
+    }
+
+    button {
+      background: $blue;
+      border: none;
+      padding: 10px 25px;
+      color: white;
+      border-radius: 3px;
+      font-size: 11px;
+      letter-spacing: 2px;
+    }
+  }
 }
 
-.linkpart a {
-    color: $whiteitem;
-    text-decoration: none;
-    margin-left: 15px;
+
+.cards {
+  width: 85%;
+  margin: -120px auto 100px;
+  display: flex;
+  justify-content: space-between;
+}
+
+.card {
+  width: 30%;
+  height: 420px;
+  position: relative;
+  background-size: cover;
+}
+
+.overlay {
+  position: absolute;
+  inset: 0;
+  background: rgba(0,0,0,0.5);
+
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  color: white;
+
+  h2 {
+    font-size: 30px;
+    letter-spacing: 6px;
+  }
+
+  p {
     font-size: 15px;
-}
-
-
-
-{
-
-}
-
-
-.heroitem {
-    height: 500px;
-    background: url("../images/hero-image.jpg") center/cover no-repeat;
-    padding-top: 90px;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    text-align: center;
-    color: $whiteitem;
-}
-
-.heroitem h1 {
-    font-size: 36px;
-}
-
-.heroitem p {
-    font-size: 14px;
-    width: 60%;
-    margin-top: 8px;
-}
-
-.bluejob {
-    margin-top: 15px;
-    padding: 8px 25px;
-    background: $blueitem;
-    border: none;
-    color: white;
-    cursor: pointer;
-}
-
-
-.trippart {
-    width: 85%;
-    margin: 60px auto;
-    display: flex;
-    justify-content: space-around;
-    flex-wrap: wrap;
-}
-
-.tripitem, .place, .area {
-    width: 28%;
-    text-align: center;
-    margin-bottom: 20px;
-}
-
-.tripitem img, .place img, .area img {
-    width: 100%;
-    height: 200px;
-    object-fit: cover;
-}
-
-.tripitem h2, .place h2, .area h2 {
     margin-top: 10px;
-    font-size: 18px;
-}
+  }
 
-.tripitem p, .place p, .area p {
-    color: gray;
-    font-size: 14px;
-}
-
-.smalljob {
-    margin-top: 8px;
-    padding: 6px 15px;
-    background: $blueitem;
+  button {
+    margin-top: 20px;
+    background: $blue;
     border: none;
+    padding: 10px 25px;
     color: white;
-    cursor: pointer;
-}
-
-
-.formjob {
-    width: 85%;
-    margin: 40px auto 80px;
-    background: #f0f0f0;
-    padding: 30px;
+    border-radius: 25px;
+    font-size: 11px;
+    letter-spacing: 2px;
+  }
 }
 
 
 
+.israel { background: url('../images/tour-01.jpg') center/cover; }
+.usa    { background: url('../images/tour-02.jpg') center/cover; }
+.aus    { background: url('../images/tour-03.jpg') center/cover; }
+
+.form {
+  width: 65%;
+  margin: 100px auto;
+
+  h2 {
+    font-size: 40px;
+    letter-spacing: 6px;
+    margin-bottom: 30px;
+  }
+}
+
+.row {
+  display: flex;
+  gap: 20px;
+  margin-bottom: 15px;
+
+  input {
+    flex: 1;
+    padding: 12px;
+    border: 1px solid $blue;
+  }
 }
 
 
-.formjob h3 {
-    font-style: italic;
-    margin-bottom: 20px;
+.row.date {
+  align-items: center;
+
+  label {
+    width: 120px;
+  }
+
+  input {
+    flex: 1;
+  }
 }
 
-.rowitem, .floor {
+.row.small {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  .field {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+  }
+
+  select {
+    width: 60px;
+    padding: 8px;
+    border: 1px solid $blue;
+  }
+}
+
+
+textarea {
+  width: 100%;
+  height: 140px;
+  padding: 12px;
+  border: 1px solid $blue;
+  margin: 20px 0;
+}
+
+
+.submit {
+  width: 100%;
+  padding: 18px;
+  background: $blue;
+  color: white;
+  border: none;
+  border-radius: 50px;
+}
+
+.footer {
+  background: $blue;
+  color: white;
+  padding: 40px 8%;
+
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  .socials {
     display: flex;
     gap: 15px;
-    margin-bottom: 15px;
-}
-
-.rowitem input, .floor input {
-    flex: 1;
-    padding: 8px;
-    border: 1px solid $blueitem;
-}
-
-.selectpart {
-    display: flex;
-    gap: 10px;
-    margin-bottom: 15px;
-}
-
-.selectpart select {
-    flex: 1;
-    padding: 8px;
-    border: 1px solid $blueitem;
-}
-
-.boxitem {
-    width: 100%;
-    height: 100px;
-    padding: 8px;
-    border: 1px solid $blueitem;
-    margin-bottom: 15px;
-}
-
-
-
-}
-
-
-
-.sendjob {
-    padding: 8px 30px;
-    background: $blueitem;
-    border: none;
-    color: white;
-    cursor: pointer;
+  }
 }
 
 @media (max-width: 800px) {
-    .trippart {
-        flex-direction: column;
-        gap: 30px;
-    }
-    .rowitem, .floor, .selectpart {
-        flex-direction: column;
-    }
-    .linkpart {
-        display: none;
-    }
+
+  .nav-content {
+    flex-direction: column;
+  }
+
+  .links {
+    margin-top: 10px;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+
+  .cards {
+    flex-direction: column;
+  }
+
+
+
+
+
+  .card {
+    width: 100%;
+    height: 350px;
+    margin-bottom: 20px;
+  }
+
+  .form {
+    width: 90%;
+  }
+
 }
 
 
+  .row {
+    flex-direction: column;
+  }
 
-}
+  .row.small {
+    flex-direction: column;
+    gap: 10px;
+
+    .field {
+      justify-content: space-between;
+      width: 100%;
+    }
+  }
+
+  .footer {
+    flex-direction: column;
+    gap: 20px;
+    text-align: center;
+  }
+
+
+
